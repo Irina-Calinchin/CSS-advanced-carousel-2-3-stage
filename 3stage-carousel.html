@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 Stage Carousel | Advanced CSS Selectors</title>
+    <style>
+
+        body {
+            background-color: #555;
+        }
+        .carousel {
+            width: 840px;
+            /* border: 5px solid green; */
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            box-shadow: 0 0 10px 3px #333;
+        }
+        
+        .carousel .slide {
+            width: 2525px;
+            /* border: 3px solid red; */
+            transition: 1s;
+        }
+        .carousel .controls {
+            text-align: center;
+        }
+        .carousel .controls a {
+            color: #669999;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        .carousel .controls a:hover {
+            color: white;
+        }
+        .carousel #one:target .slide {
+            transform: translateX(0px);
+        }
+        .carousel #two:target .slide {
+            transform: translateX(-840px);
+        }
+        .carousel #tree:target .slide { 
+            transform: translateX(-1680px);
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div id="one">
+
+            <div id="two">
+
+                <div id="tree">
+
+                    <div class="slide">
+                        <img src="https://i.picsum.photos/id/243/280/400.jpg?hmac=TOubggUPlsIxBPwj-E-ZBxrww2X66GE9QP-_kL-O8JA" alt=""><img src="https://i.picsum.photos/id/518/280/400.jpg?hmac=QLakflWYiDj3PWTIiLXdGp_xKEPR7xtjpzs4_ac7Sas" alt=""><img src="https://i.picsum.photos/id/433/280/400.jpg?hmac=Gc98xOqaMaLZMxITBDkAi_GN47dqf5q6qY00eh_vGak" alt=""><img src="https://i.picsum.photos/id/611/280/400.jpg?hmac=JBNcnMJjoPK0lSAh5aFLOACiGMXYzprRTERfuU3eCmo" alt=""><img src="https://i.picsum.photos/id/539/280/400.jpg?hmac=uTXcdOzq-PsENChPb1l0AUQ7c2p3NFVlO7yWL1ucyG8" alt=""><img src="https://i.picsum.photos/id/43/280/400.jpg?hmac=4fkYOQnuDWg5SKtERbeigZVFIOlJUWtg4cMqS__UNVI" alt=""><img src="https://i.picsum.photos/id/430/280/400.jpg?hmac=2mny9vfZDHIXMDGPQf0qMcv-1R2me7LdLczyGnMwXMg" alt=""><img src="https://i.picsum.photos/id/700/280/400.jpg?hmac=2VUFfd9tUpHKyaNVANFEdbYCn3MTWEiSDfNXN0LXOpU" alt=""><img src="https://i.picsum.photos/id/384/280/400.jpg?hmac=KfMbSVUXaAoIrDg1N-D-sT3QW9N-Z0LrayyYkLhrH6w" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <a href="#one">1</a>
+            <a href="#two">2</a>
+            <a href="#tree">3</a>
+        </div>
+    </div>
+</body>
+</html>
